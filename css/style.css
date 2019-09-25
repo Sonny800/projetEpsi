@@ -1,0 +1,359 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #f5f5f5;
+}
+    
+a {
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+/* HEADER */
+header {
+    height: 100vh;
+}
+
+/* Header banner */
+header:after {
+    content: '';
+    top: 0; bottom: 0; left: 0; right: 0;
+    display: block;
+    background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('../images/bread-header.jpg') no-repeat top;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Header nav */
+.header__nav {
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.68);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+
+.header__nav__logo {
+    padding-left: 22px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: brown;
+    
+}
+
+.header__nav__logo i {
+    color: brown;
+    padding-right: 0.5em;
+    font-size: 1.7em;
+    animation: pulse 2s infinite;
+}
+
+.header__nav__menu {
+    padding-right: 50px;
+}
+
+.header__nav__menu__item {
+    padding-right: 2em;
+    transition: all .5s;
+    display: inline-block
+    
+}
+
+.header__nav__menu__item:hover {
+    transform: scale(1.1);
+    color: red;
+}
+
+/* Header title */
+.header__title {
+    color: white;
+    text-align: center;
+    letter-spacing: 3px;
+    padding-top: 300px;
+    animation: slideTop 2s forwards;
+}
+
+.header__title__title {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.header__title__address {
+    font-weight: 300;
+}
+
+/* Responsive header */
+@media (max-width: 779px) {
+    .header__nav__menu__item {
+        font-size: 0.9em;
+        padding-right: 1.2em;
+    }
+    .header__nav__menu__item:nth-child(1){
+        display: none;
+    }
+}
+
+
+/* WHOIAM */
+
+.whoiam {
+    height: 100vh;
+    padding-top: 5em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.whoiam__picture { 
+    width: 100%;
+    padding-top: 8em;
+}
+
+.whoiam__picture img {
+    width: 100%;
+    width: 400px;
+    height: 400px;
+    border-radius: 2%;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+}
+
+.whoiam__description {
+    padding: 4em 0.2em;
+}
+
+.whoiam__description__item__title {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.whoiam__description__item__desc {
+    opacity: 0.5;
+    line-height: 1.9;
+    text-align: justify;
+    padding-bottom: 4em;
+    border-bottom: 2px solid brown;
+}
+
+/* Responsive WHOIAM */
+@media (max-width: 1300px){
+    .whoiam {
+        padding: 0;
+        text-align: center;
+        flex-direction: column;
+        overflow: hidden;
+        font-size: 0.8em;
+    }
+    .whoiam__description {
+        padding: 0;
+    }
+    .whoiam__picture img {
+        height: 200px;
+    }
+
+    .whoiam__picture {
+        padding: 2em;
+    }
+}
+
+@media (min-width: 1301px){
+    .whoiam__description {
+        padding-left: 4em;
+    }
+}
+
+/* TABLEAU DES PRIX */
+.products {
+    height: 100vh;
+    padding-top: 1em;
+}
+
+table, th, td {
+    border-bottom: 1px solid brown;
+}
+
+th {
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 1em;
+}
+
+tr:nth-child(odd) {
+    color: brown;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(165,42,42,1);
+    color: white;
+}
+
+table {
+    margin: 0 auto;
+}
+
+table caption {
+    caption-side: top;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    border-top: 2px solid brown;
+    padding-top: 2em;
+}
+
+/* FORMULAIRE */
+.forms {
+    height: 100vh;
+}
+form {
+    display: block;
+    padding: 5em 7em;
+    margin-top: 4em;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    border: 2px solid brown;
+    border-top: none;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+
+}
+
+form label {
+    display: inline-block;
+    width: 200px;
+}
+
+.form__title {
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    border-top: 2px solid brown;
+    padding-top: 2em;
+}
+
+form input {
+    border: none;
+    outline: none;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid brown;
+    
+}
+
+form textarea {
+    width: 65%;
+    background-color: #f5f5f5;
+}
+
+form select {
+    background-color: #f5f5f5;
+    border: none;
+    outline: none;
+}
+
+
+@media (max-width: 800px) {
+    form {
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        padding: 2em 2em;
+    }
+    form textarea {
+        width: 90%;
+    }
+}
+
+footer {
+    background-color: brown;
+    padding: 5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__left {
+    border-right: 2px solid white;
+    padding-right: 7em;
+}
+
+.footer__address:first-child {
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+
+.footer__right {
+    font-size: 2em;
+    padding-left: 4em;
+}
+
+.footer__right i {
+    padding-right: 0.9em;
+}
+
+.footer__right {
+    display: flex;
+}
+
+footer p:last-child {
+    margin: 0;
+}
+
+@media (max-width: 900px){
+    footer {
+        flex-direction: column;
+        display: flex;
+        font-size: 0.8em;
+        text-align: center;
+    }
+    .footer__left {
+        border: none;
+    }
+    .footer__right {
+        padding-left: 0;
+        padding-top: 2em;
+    }
+}
+
+
+
+
+/* ANIMATION */
+@keyframes slideTop {
+    0% {
+        transform: translateY(-10em);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
