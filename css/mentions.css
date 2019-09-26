@@ -1,0 +1,37 @@
+.mentions {
+    width: 70%;
+    margin: 2em auto;
+    border-top: 2px solid brown;
+    padding-top: 2em;
+}
+
+.mentions__title {
+    text-align: center;
+}
+
+.mentions__bigtitle {
+    padding: 1em 0;
+    font-weight: bold;
+    color: brown;
+    text-transform: uppercase;
+}
+
+.mentions__subtitle {
+    padding: 0.5em 0;
+    font-style: italic;
+}
+
+.mentions__content {
+    text-align: justify;
+}
+
+@media(max-width: 950px){
+    .mentions {
+        width: 90%;
+    }
+
+    .mentions__content {
+        line-height: 1.8
+    }
+}
+

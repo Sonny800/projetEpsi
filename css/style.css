@@ -25,7 +25,7 @@ header {
     height: 100vh;
 }
 
-/* Header banner */
+/* Heade banner */
 header:after {
     content: '';
     top: 0; bottom: 0; left: 0; right: 0;
@@ -74,7 +74,7 @@ header:after {
 
 .header__nav__menu__item:hover {
     transform: scale(1.1);
-    color: red;
+    color: brown;
 }
 
 /* Header title */
@@ -125,10 +125,15 @@ header:after {
 
 .whoiam__picture img {
     width: 100%;
-    width: 400px;
+    width: 490px;
     height: 400px;
-    border-radius: 2%;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    object-fit: cover;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    opacity: 0.5;
+}
+
+.whoiam__picture img:hover {
+    opacity: 1;
 }
 
 .whoiam__description {
@@ -146,6 +151,10 @@ header:after {
     text-align: justify;
     padding-bottom: 4em;
     border-bottom: 2px solid brown;
+}
+
+.whoiam__description__item__desc:hover {
+    opacity: 1;
 }
 
 /* Responsive WHOIAM */
@@ -210,9 +219,11 @@ table caption {
     caption-side: top;
     text-align: center;
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 2.5em;
     border-top: 2px solid brown;
     padding-top: 2em;
+    color: brown;
+
 }
 
 /* FORMULAIRE */
@@ -287,6 +298,11 @@ footer {
     justify-content: center;
 }
 
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
 .footer__left {
     border-right: 2px solid white;
     padding-right: 7em;
@@ -320,14 +336,19 @@ footer p:last-child {
         flex-direction: column;
         display: flex;
         font-size: 0.8em;
-        text-align: center;
     }
     .footer__left {
         border: none;
+        margin: 0 auto;
+        padding-right: 0;
+        text-align: justify;
+        border-bottom: 2px solid white;
+        padding-bottom: 4em;
     }
     .footer__right {
         padding-left: 0;
         padding-top: 2em;
+        margin: 0 auto;
     }
 }
 
